@@ -4,7 +4,7 @@ Component Name: Footer Flex
 Description: Footer with Widget Area display in Flexbox
 Category: Layout
 Tags: Footer, Flexbox
-Version: 1.0
+Version: 1.0.0
 Author: WAGA Team <dev@waga.it>
 Author URI: http://www.waga.it
  */
