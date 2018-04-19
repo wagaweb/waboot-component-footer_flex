@@ -51,9 +51,9 @@ class Footer_Flex extends \Waboot\Component {
         $vClosure = new \WBF\components\mvc\HTMLView($this->theme_relative_path."/templates/closure-content.php");
 
         $vWrapper->clean()->display([
-            "footer_width" => Waboot\functions\get_option("footer_flex_width"),
+            "footer_width" => WabootLayout()->get_container_grid_class(\Waboot\functions\get_option( 'footer_flex_width') ),
             "closure_content" => $vClosure->get([
-                "closure_width" => Waboot\functions\get_option( "closure_width"),
+                "closure_width" => WabootLayout()->get_container_grid_class(\Waboot\functions\get_option( 'closure_width') ),
                 "footer_custom_toggle" => Waboot\functions\get_option( "footer_custom_toggle" ),
                 "footer_text" => \Waboot\functions\get_option('footer_custom_toggle') ? \Waboot\functions\get_option('footer_custom_text') : '&copy; ' . date('Y') . ' ' . get_bloginfo('name')
             ])
@@ -100,14 +100,14 @@ class Footer_Flex extends \Waboot\Component {
 			'name' => __( 'Footer Width', 'waboot' ),
 			'desc' => __( 'Select footer width. Fluid or Boxed?', 'waboot' ),
 			'id' => 'footer_flex_width',
-			'std' => 'container',
+			'std' => \Waboot\Layout::GRID_CLASS_CONTAINER,
 			'type' => 'images',
 			'options' => array(
-				'container-fluid' => array (
+                \Waboot\Layout::GRID_CLASS_CONTAINER_FLUID => array (
 					'label' => 'Fluid',
 					'value' => $imagepath . 'layout/footer-fluid.png'
 				),
-				'container' => array (
+                \Waboot\Layout::GRID_CLASS_CONTAINER => array (
 					'label' => 'Boxed',
 					'value' => $imagepath . 'layout/footer-boxed.png'
 				)
@@ -127,14 +127,14 @@ class Footer_Flex extends \Waboot\Component {
 			'name' => __( 'Closure', 'waboot' ),
 			'desc' => __( 'Select closure width. Fluid or Boxed?', 'waboot' ),
 			'id' => 'closure_width',
-			'std' => 'container',
+            'std' => \Waboot\Layout::GRID_CLASS_CONTAINER,
 			'type' => 'images',
 			'options' => array(
-				'container-fluid' => array (
+                \Waboot\Layout::GRID_CLASS_CONTAINER_FLUID => array (
 					'label' => 'Fluid',
 					'value' => $imagepath . 'layout/closure-fluid.png'
 				),
-				'container' => array (
+                \Waboot\Layout::GRID_CLASS_CONTAINER => array (
 					'label' => 'Boxed',
 					'value' => $imagepath . 'layout/closure-boxed.png'
 				)
