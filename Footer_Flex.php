@@ -20,6 +20,7 @@ class Footer_Flex extends \Waboot\Component {
 	 */
 	public function setup(){
 		parent::setup();
+		add_filter('waboot/theme_options_css_file/content',[$this,'inject_theme_options_css_properties']);
 	}
 
     public function styles(){
@@ -143,5 +144,17 @@ class Footer_Flex extends \Waboot\Component {
 
 		$orgzr->reset_group();
 		$orgzr->reset_section();
+	}
+
+	public function inject_theme_options_css_properties($content){
+		ob_start();
+		?>
+		.closure {
+			background-color: {{ closure_bgcolor }};
+		}
+		<?php
+		$output = trim(ob_get_clean());
+		$content .= $output;
+		return $content;
 	}
 }
