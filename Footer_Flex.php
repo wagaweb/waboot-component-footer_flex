@@ -149,9 +149,12 @@ class Footer_Flex extends \Waboot\Component {
 	public function inject_theme_options_css_properties($content){
 		ob_start();
 		?>
-		.closure {
-			background-color: {{ closure_bgcolor }};
-		}
+        .footer-flex {
+            background-color: {{ footer_flex_bgcolor }};
+        }
+        .closure {
+            background-color: {{ closure_bgcolor }};
+        }
 		<?php
 		$output = trim(ob_get_clean());
 		$content .= $output;
