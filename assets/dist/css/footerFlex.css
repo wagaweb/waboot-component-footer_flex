@@ -1,11 +1,11 @@
 @media(min-width: 768px) {
-    .footer__widgetarea {
+    .footer-flex__widgetarea {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         margin: 0 -10px;
     }
-    .footer-widget {
+    .footer-flex__widget {
         padding: 0 10px;
     }
     .closure__inner {
