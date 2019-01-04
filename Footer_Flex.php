@@ -92,15 +92,6 @@ class Footer_Flex extends \Waboot\Component {
 			'type' => 'textarea'
 		],"footer");
 
-        $orgzr->add([
-            'name' => _x('Footer Background', 'Theme options', 'waboot'),
-            'desc' => _x('Change the footer background color.', 'Theme options', 'waboot'),
-            'id' => 'footer_flex_bgcolor',
-            'type' => 'color',
-            'std' => '#f6f6f6',
-            'save_action' => "\\Waboot\\functions\\deploy_theme_options_css"
-        ],"footer");
-
 		$orgzr->add([
 			'name' => __( 'Footer Width', 'waboot' ),
 			'desc' => __( 'Select footer width. Fluid or Boxed?', 'waboot' ),
@@ -118,15 +109,6 @@ class Footer_Flex extends \Waboot\Component {
 				)
 			)
 		],"footer");
-
-        $orgzr->add([
-            'name' => _x('Closure Background', 'Theme options', 'waboot'),
-            'desc' => _x('Change the closure background color.', 'Theme options', 'waboot'),
-            'id' => 'closure_bgcolor',
-            'type' => 'color',
-            'std' => '#f6f6f6',
-            'save_action' => "\\Waboot\\functions\\deploy_theme_options_css"
-        ],"footer");
 
 		$orgzr->add([
 			'name' => __( 'Closure', 'waboot' ),
