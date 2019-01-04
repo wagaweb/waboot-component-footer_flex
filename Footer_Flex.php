@@ -4,7 +4,7 @@ Component Name: Footer Flex
 Description: Footer with Widget Area display in Flexbox
 Category: Layout
 Tags: Footer, Flexbox
-Version: 1.1.0
+Version: 1.1.1
 Author: Waboot Team <info@waboot.io>
 Author URI: http://www.waboot.io
  */
