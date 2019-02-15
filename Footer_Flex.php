@@ -4,7 +4,7 @@ Component Name: Footer Flex
 Description: Footer with Widget Area display in Flexbox
 Category: Layout
 Tags: Footer, Flexbox
-Version: 1.1.1
+Version: 1.2.0
 Author: Waboot Team <info@waboot.io>
 Author URI: http://www.waboot.io
  */
@@ -21,11 +21,11 @@ class Footer_Flex extends \Waboot\Component {
 	public function setup(){
 		parent::setup();
 		add_filter('waboot/theme_options_css_file/content',[$this,'inject_theme_options_css_properties']);
+		Waboot()->add_component_style('footer_flex_style', $this->directory_uri . '/assets/dist/css/footerFlex.css');
 	}
 
     public function styles(){
         parent::styles();
-        Waboot()->add_inline_style('footer_flex_style', $this->directory_uri . '/assets/dist/css/footerFlex.css');
     }
 
 	public function run(){
